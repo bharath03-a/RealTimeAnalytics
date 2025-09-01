@@ -1,8 +1,8 @@
-# RealTimeReelAnalytics
+# RealTimeAnalytics
 
 ## Overview
 
-RealTimeReelAnalytics is a real-time streaming pipeline built with Apache Beam and Scio that analyzes social media reel interactions to detect "buzz" - when multiple friends of a user interact with the same reel content.
+RealTimeAnalytics is a **product analytics data pipeline playground** built with Apache Beam and Scio. This repository serves as a sandbox for experimenting with various real-time streaming analytics use cases, from social media engagement tracking to user behavior analysis leveraging scala data pipelines along my learning path to integrate different product use cases and business problems.
 
 ## Features
 
@@ -24,19 +24,16 @@ The pipeline processes interaction events (likes, comments) in real-time:
 4. **Detect buzz** when 2+ friends interact with same reel
 5. **Output** notifications to BigQuery
 
-## Running Locally
+![Pipeline Logs and Output](logs.png)
+
+## Quick Start
 
 ### Prerequisites
-
 - Java 11+
 - SBT 1.10+
 - Google Cloud credentials configured
-- Access to Pub/Sub subscription and GCS bucket
 
 ### Local Development
-
-The project ships with Beam `DirectRunner` for local testing:
-
 ```bash
 # Compile the project
 sbt compile
@@ -49,9 +46,6 @@ sbt "runMain dataengineering.BuzzDetectionJob \
 ```
 
 ### Google Cloud Dataflow
-
-For production runs on Google Cloud Dataflow:
-
 ```bash
 sbt "runMain dataengineering.BuzzDetectionJob \
   --runner=DataflowRunner \
@@ -65,26 +59,16 @@ sbt "runMain dataengineering.BuzzDetectionJob \
 ## Configuration
 
 ### Required Arguments
-
 - `--inputSubscription`: Pub/Sub subscription path
 - `--outputBQTable`: BigQuery table for results
 - `--userGraphPath`: GCS path to user graph CSV file
 
 ### Optional Arguments
-
 - `--runner`: Beam runner (DirectRunner, DataflowRunner, etc.)
 - `--project`: Google Cloud project ID
 - `--region`: Google Cloud region
 
-## Testing
-
-Run the test suite:
-
-```bash
-sbt test
-```
-
-### Project Structure
+## Project Structure
 
 ```
 src/main/scala/dataengineering/
@@ -95,7 +79,7 @@ src/main/scala/dataengineering/
     └── PipelineArgs.scala    # Command-line argument parsing
 ```
 
-### Dependencies
+## Dependencies
 
 - **Scio**: 0.14.9 (Apache Beam wrapper)
 - **Apache Beam**: 2.60.0 (Streaming framework)
