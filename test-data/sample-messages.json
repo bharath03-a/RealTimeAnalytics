@@ -1,0 +1,102 @@
+[
+  {
+    "event_id": "evt_001",
+    "event_timestamp": 1704067200000,
+    "event_type": "like",
+    "actor_id": "user_001",
+    "reel_id": "reel_001",
+    "author_id": "creator_001",
+    "watch_time_ms": 5000,
+    "surface": "home_feed"
+  },
+  {
+    "event_id": "evt_002",
+    "event_timestamp": 1704067260000,
+    "event_type": "comment",
+    "actor_id": "user_002",
+    "reel_id": "reel_001",
+    "author_id": "creator_001",
+    "watch_time_ms": 3000,
+    "surface": "home_feed"
+  },
+  {
+    "event_id": "evt_003",
+    "event_timestamp": 1704067320000,
+    "event_type": "like",
+    "actor_id": "user_003",
+    "reel_id": "reel_001",
+    "author_id": "creator_001",
+    "watch_time_ms": 4500,
+    "surface": "home_feed"
+  },
+  {
+    "event_id": "evt_004",
+    "event_timestamp": 1704067380000,
+    "event_type": "like",
+    "actor_id": "user_004",
+    "reel_id": "reel_002",
+    "author_id": "creator_002",
+    "watch_time_ms": 1500,
+    "surface": "explore"
+  },
+  {
+    "event_id": "evt_005",
+    "event_timestamp": 1704067440000,
+    "event_type": "like",
+    "actor_id": "user_005",
+    "reel_id": "reel_002",
+    "author_id": "creator_002",
+    "watch_time_ms": 6000,
+    "surface": "home_feed"
+  },
+  {
+    "event_id": "evt_006",
+    "event_timestamp": 1704067500000,
+    "event_type": "comment",
+    "actor_id": "user_006",
+    "reel_id": "reel_002",
+    "author_id": "creator_002",
+    "watch_time_ms": 4000,
+    "surface": "profile"
+  },
+  {
+    "event_id": "evt_007",
+    "event_timestamp": 1704067560000,
+    "event_type": "like",
+    "actor_id": "user_007",
+    "reel_id": "reel_003",
+    "author_id": "creator_003",
+    "watch_time_ms": 800,
+    "surface": "home_feed"
+  },
+  {
+    "event_id": "evt_008",
+    "event_timestamp": 1704067620000,
+    "event_type": "like",
+    "actor_id": "user_008",
+    "reel_id": "reel_003",
+    "author_id": "creator_003",
+    "watch_time_ms": 3500,
+    "surface": "explore"
+  },
+  {
+    "event_id": "evt_009",
+    "event_timestamp": 1704067680000,
+    "event_type": "like",
+    "actor_id": "user_009",
+    "reel_id": "reel_003",
+    "author_id": "creator_003",
+    "watch_time_ms": 4200,
+    "surface": "home_feed"
+  },
+  {
+    "event_id": "evt_010",
+    "event_timestamp": 1704067740000,
+    "event_type": "like",
+    "actor_id": "user_010",
+    "reel_id": "reel_003",
+    "author_id": "creator_003",
+    "watch_time_ms": 2800,
+    "surface": "profile"
+  }
+]
