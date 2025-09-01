@@ -24,7 +24,7 @@ The pipeline processes interaction events (likes, comments) in real-time:
 4. **Detect buzz** when 2+ friends interact with same reel
 5. **Output** notifications to BigQuery
 
-![Pipeline Logs and Output](logs.png)
+![Pipeline Logs and Output](./images/logs.png)
 
 ## Quick Start
 
