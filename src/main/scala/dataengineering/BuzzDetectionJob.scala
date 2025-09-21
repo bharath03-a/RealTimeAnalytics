@@ -49,7 +49,7 @@ object BuzzDetectionJob {
   // -------------------------
   def main(cmdlineArgs: Array[String]): Unit = {
     val (sc, args) = ContextAndArgs(cmdlineArgs)
-    val opts = PipelineArgs.fromArgs(args)
+    val opts = PipelineArgs.buzzDetectionPipelineArgs(args)
 
     // Enable streaming
     sc.optionsAs[org.apache.beam.sdk.options.StreamingOptions].setStreaming(true)
@@ -66,7 +66,7 @@ object BuzzDetectionJob {
     // SIDE INPUT: Load user graph
     // -------------------------
     val userGraphSideInput: SideInput[Map[String, List[String]]] = sc
-      .textFile(opts.userGraphPath)
+      .textFile(opts.userGraphPath.get)
       .map { line =>
         val parts = line.split(",")
         (parts(0), parts(1)) // actor_id -> friend_id
