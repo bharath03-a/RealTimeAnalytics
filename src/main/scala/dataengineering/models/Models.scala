@@ -43,6 +43,11 @@ case class CommentToxicityEvent(
   comment_text: String        // raw comment text
 )
 
+object CommentToxicityEvent {
+  implicit val decoder: Decoder[CommentToxicityEvent] = deriveDecoder[CommentToxicityEvent]
+  implicit val encoder: Encoder[CommentToxicityEvent] = deriveEncoder[CommentToxicityEvent]
+}
+
 object CommentToxicityModels {
   @BigQueryType.toTable
   case class CommentToxicityNotification(
